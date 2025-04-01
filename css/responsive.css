@@ -4,12 +4,53 @@
 
     .col-small {
         width: 50px; 
+        align-items: center;
+        padding: 15px 0 4px;
     }
 
     .col-large {
         width: calc(100% - 50px);
-        
-    
+    }
+
+    .col-small span,
+    .playlist,
+    .divisor,
+    .logo {
+        display: none;
+    }
+
+    .logo-small {
+        display: block;
+        width: 25px;
+    }
+
+    .nav-col-small i {
+        margin-left: 6px;
     }
     
+
+    .user-profile .download-app {
+        margin-left: 16px;
+    }
+
+    .name-user {
+        margin-left: 9px;
+        margin-top: 14px;
+    }
+}
+
+
+/* SPOTIFY MD */
+
+@media screen and (max-width: 768px) {
+
+    .col {
+        width: calc((100% - 10px) / 4);
+    }
+    
+    .cards {
+        flex-wrap: wrap;
+    }
+
+
 }
