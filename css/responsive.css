@@ -1,0 +1,15 @@
+/* MOBILE XS */
+
+@media screen and (max-width: 376px) {
+
+    .col-small {
+        width: 50px; 
+    }
+
+    .col-large {
+        width: calc(100% - 50px);
+        
+    
+    }
+    
+}
