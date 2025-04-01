@@ -30,6 +30,10 @@ a {
     padding-top: 25px;
 }
 
+.color-gray {
+    color: gray;
+}
+
 
 
 .col-16 {
@@ -43,8 +47,6 @@ a {
 
 body {
     font-family: "Montserrat", sans-serif;
-    
-    /* debug */
     color: white;
 }
 
@@ -52,9 +54,14 @@ ul a {
     color: gray;
 }
 
-.col-small i {
-    margin-right: 7px;
+.btn {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 30px;
 }
+
+
 
 /* WRAPPER */
 
@@ -83,7 +90,7 @@ ul a {
 
 .bottom-row [class$="-block"] {
     width: calc(100% / 3);
-
+    
     /* debug */
     border: 1px dashed white;
 }
@@ -103,6 +110,10 @@ ul a {
     overflow-y: auto;
     background-color: black;
     justify-content: space-between;
+}
+
+.col-small i {
+    margin-right: 7px;
 }
 
 .logo {
@@ -178,6 +189,8 @@ ul a {
     overflow-y: auto;
 }
 
+
+/* HEADER */
 .col-large-header {
     display: flex;
     align-items: center;
@@ -189,6 +202,15 @@ ul a {
     background-color: #080B12;
 }
 
+.upgrade {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 600;
+
+}
+
+
+/*  MAIN */
 .list-nav-main {
     display: flex;
     justify-content: center;
@@ -212,14 +234,43 @@ ul a {
 }
 
 .col {
-    width: calc((100% - 10px) / 6);
+    width: calc((100% - 50px) / 6);
+    text-align: center;
     min-height: 100px;
     border: 1px dashed white;
+}
+
+.card h5 {
+    margin-top: 10px;
 }
 
 
 .recently-played h2 {
     margin-bottom: 17px;
+}
+
+.card .img:hover {
+    position: relative;
+    opacity: 0.7;
+}
+
+.card i {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.card:hover i {
+    display: inline-block;
+}
+
+.Subtitle {
+    margin: 10px;
+    font-size: 0.6rem;
+    font-weight: 600;
 }
 
 

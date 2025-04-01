@@ -1,11 +1,11 @@
 /* MOBILE XS */
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 400px) {
 
     .col-small {
         width: 50px; 
         align-items: center;
-        padding: 15px 0 4px;
+        padding: 5px 0 8px;
     }
 
     .col-large {
@@ -24,18 +24,25 @@
         width: 25px;
     }
 
-    .nav-col-small i {
-        margin-left: 6px;
+    .nav-col-small ul li {
+        margin-bottom: 10px;
     }
-    
+
+    .col-small i {
+        margin-right: 0;
+    }
+
+    .nav-col-small i {
+        font-size: 17px;
+    }
 
     .user-profile .download-app {
-        margin-left: 16px;
-    }
+        display: flex;
+        justify-content: center;
+    } 
 
     .name-user {
-        margin-left: 9px;
-        margin-top: 14px;
+        margin-top: 15px;
     }
 }
 
@@ -45,7 +52,7 @@
 @media screen and (max-width: 768px) {
 
     .col {
-        width: calc((100% - 10px) / 4);
+        width: calc((100% - 50px) / 4);
     }
     
     .cards {
