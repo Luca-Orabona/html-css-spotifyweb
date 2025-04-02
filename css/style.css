@@ -10,6 +10,9 @@ img {
 }
 
 /* UTILITIES */
+.flex {
+    display: flex;
+}
 
 ul {
     list-style: none;
@@ -22,25 +25,31 @@ a {
 }
 
 
-.px-10 {
-    padding: 0 10px;
+.px-15 {
+    padding: 0 15px;
 }
 
-.pt-25 {
-    padding-top: 25px;
+.pb-17 {
+    padding-bottom: 17px;
 }
 
 .color-gray {
     color: gray;
 }
 
-
-
-.col-16 {
-    width: 16%;
-    min-height: 100px;
-    border: 1px dashed white;
+.inline-block {
+    display: inline-block;
 }
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+
 
 
 /* COMMON */
@@ -50,8 +59,12 @@ body {
     color: white;
 }
 
-ul a {
+a {
     color: gray;
+}
+
+a:hover {
+    color: white;
 }
 
 .btn {
@@ -59,6 +72,21 @@ ul a {
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px 30px;
+}
+
+.btn:hover {
+    scale: 1.1;
+}
+
+.circle { 
+    display: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: -3px;
 }
 
 
@@ -84,16 +112,137 @@ ul a {
 /* ROW BOTTOM */
 .bottom-row {
     display: flex;
+    align-items: center;
     height: 70px;
     background-color: #282828;
 }
 
 .bottom-row [class$="-block"] {
     width: calc(100% / 3);
-    
-    /* debug */
-    border: 1px dashed white;
 }
+
+
+
+
+
+
+/* LEFT BLOCK */
+
+.left-block img {
+    width: 35px;
+    margin-right: 5px;
+}
+.left-block > * {
+    vertical-align: middle;
+}
+
+.left-block h5 {
+    font-size: 0.6rem;
+}
+
+.icon-left-block {
+    text-align: center;
+}
+
+.icon-left-block i:first-child {
+    margin-right: 10px;
+}
+
+.icon-left-block i {
+    font-size: 0.7rem;
+}
+
+.icon-left-block i:hover {
+    color: white;
+}
+
+.subtitle-left-block {
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+
+.subtitle-left-block:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+/* CENTER BLOCK */
+
+.icon-center-block i:nth-child(even) {
+    margin: 0 18px 0 15px;
+}
+
+.icon-center-block i.fa-play-circle {
+    font-size: 1.5rem;
+}
+
+.icon-center-block i.fa-play-circle:hover {
+    scale: 1.2;
+}
+
+.icon-center-block i {
+    vertical-align: middle;
+}
+
+
+.center-block .bar {
+    width: 60%;
+    height: 4px;
+    background-color: gray;
+    border-radius: 15px;
+    margin: 0 15px;
+}
+
+.center-block time {
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+.time > * {
+    vertical-align: middle;
+}
+
+.bar-w-25 {
+    position: relative;
+    width: 25%;
+    height: 4px;
+    background-color: rgb(188, 185, 185);
+    border-radius: 15px;
+}
+
+.bar-w-25:hover {
+    background-color: rgb(156 216 29);  
+}
+
+.bar-w-25:hover .circle {
+    display: block;  
+}
+
+
+
+
+/* RIGHT BLOCK */
+.icon-right-block i {
+    margin-right: 15px;
+    font-size: 0.6rem;
+}
+
+.icon-right-block > * {
+    vertical-align: middle;
+}
+
+.right-block .bar {
+    width: 30%;
+    height: 4px;
+    background-color: gray;
+    border-radius: 15px;
+    margin: 0 5px;
+}
+
+ 
+
 
 
 /******* COLUMN  *******/
@@ -138,10 +287,7 @@ ul a {
     font-weight: 600;
 }
 
-/* .nav-col-small ul:first-child i {
-    margin-right: 7px;
 
-} */
 
 /* PLAYLIST */
 
@@ -160,7 +306,6 @@ ul a {
 .user-profile a {
     font-size: 0.7rem;
     padding: 5px 0;
-    color: gray;
 }
 
 .user-profile .name-user {
@@ -196,10 +341,11 @@ ul a {
     align-items: center;
     justify-content: flex-end;
     height: 60px;
-    padding-right: 10px;
+    padding-right: 15px;
     position: sticky;
     top: 0;
-    background-color: #080B12;
+    z-index: 9999;
+    background-color: hsla(222, 38%, 5%, 0.607) ;
 }
 
 .upgrade {
@@ -207,6 +353,19 @@ ul a {
     font-size: 0.6rem;
     font-weight: 600;
 
+}
+
+.list-nav-main a:first-child {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.border {
+    width: 35%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: greenyellow;
+    margin: 0 auto;
 }
 
 
@@ -230,14 +389,13 @@ ul a {
 
 .cards {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .col {
     width: calc((100% - 50px) / 6);
     text-align: center;
-    min-height: 100px;
-    border: 1px dashed white;
 }
 
 .card h5 {
@@ -249,12 +407,12 @@ ul a {
     margin-bottom: 17px;
 }
 
-.card .img:hover {
+.img {
     position: relative;
-    opacity: 0.7;
 }
 
-.card i {
+
+.img i {
     display: none;
     position: absolute;
     top: 50%;
@@ -263,9 +421,15 @@ ul a {
     font-size: 50px;
 }
 
-.card:hover i {
-    display: inline-block;
+/* hover img */
+.col-large img:hover {
+    opacity: 0.4;
 }
+
+.img:hover i {
+    display: block;
+}
+
 
 .Subtitle {
     margin: 10px;
@@ -274,9 +438,27 @@ ul a {
 }
 
 
+/* SECTION JOHN DOE */
+
+    
+
+
+
+
+/* SECTION POPULAR ARTISTS */
+.popular-artists img {
+    border-radius: 50%;
+}
+
 /* SECTION GENERAL */
 .john-doe p,
 .popular-artists p {
     margin-top: 10px;
     margin-bottom: 25px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.col-large h2 {
+    font-size: 1.2rem;
 }

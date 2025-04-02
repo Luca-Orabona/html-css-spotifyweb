@@ -1,4 +1,53 @@
-/* MOBILE XS */
+
+/* SPOTIFY MD */
+
+@media screen and (max-width: 768px) {
+
+    .col {
+        width: calc((100% - 30px) / 4);
+    }
+}
+
+/* SPOTIFY CAMBIO FOOTER */
+@media screen and (max-width: 615px) {
+
+    
+    .bottom-row [class$="-block"] {
+        /* width: calc(100% / 2); */
+        width: auto;
+    }
+    
+    .bottom-row {
+        justify-content: space-between;
+    }
+
+   .right-block {
+        display: none;
+   }
+
+   .center-block .bar {
+        width: 40%;
+    }
+
+    .icon-left-block {
+        padding-left: 10px;
+    }
+    
+}
+
+
+/* SPOTIFY S */
+
+@media screen and (max-width: 520px) {
+
+    .col {
+        width: calc((100% - 10px) / 2);
+    }
+}
+
+
+
+/* SPOTIFY XS */
 
 @media screen and (max-width: 400px) {
 
@@ -47,17 +96,5 @@
 }
 
 
-/* SPOTIFY MD */
-
-@media screen and (max-width: 768px) {
-
-    .col {
-        width: calc((100% - 50px) / 4);
-    }
-    
-    .cards {
-        flex-wrap: wrap;
-    }
 
 
-}
