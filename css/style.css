@@ -9,6 +9,10 @@ img {
     max-width: 100%;
 }
 
+:root {
+    --num-column: 6;
+}
+
 /* UTILITIES */
 .flex {
     display: flex;
@@ -35,6 +39,11 @@ a {
 
 .color-gray {
     color: gray;
+}
+
+.color-white {
+    color: white;
+    border: 1px solid white;
 }
 
 .inline-block {
@@ -69,7 +78,6 @@ a:hover {
 
 .btn {
     display: inline-block;
-    border: 1px solid white;
     border-radius: 20px;
     padding: 10px 30px;
 }
@@ -248,9 +256,10 @@ a:hover {
 /******* COLUMN  *******/
 
 
-/* COLUMN SMALL */
+/*** COLUMN SMALL ***/
 
 .col-small {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 175px;
@@ -265,55 +274,82 @@ a:hover {
     margin-right: 7px;
 }
 
+.col-small ul li {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+
+/* NAV USER */
+
 .logo {
-    width: 107px;
+    width: 95px;
+    margin-bottom: 12px;
 }
 
 .logo-small {
     display: none;
 }
 
-.nav-col-small {
-    flex-grow: 1;
-}
+.border-left {
+    display: inline-block;
+    width: 3px;
+    height: 13px;
+    background-color: greenyellow;
+    position: absolute;
+    left: 0;
 
-.nav-col-small ul {
-    padding-top: 15px;
 }
-
-.nav-col-small ul li {
-    margin-bottom: 15px;
-    font-size: 0.7rem;
-    font-weight: 600;
-}
-
 
 
 /* PLAYLIST */
 
-.playlist i {
+/* create playlist */
+.create-playlist i {
     font-size: 35px;
     vertical-align: middle;
 }
+
+.create-playlist h3 {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+    padding-top: 10px;
+}
+
+.create-playlist a {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+
+/* list playlist */
+.list-playlist {
+    flex-grow: 1;
+    margin-top: 15px;
+    overflow: auto;
+}
+
 
 
 /* USER PROFILE */
 
 .user-profile {
     font-weight: 600;
+    padding-top: 12px;
 }
 
-.user-profile a {
-    font-size: 0.7rem;
+.user-profile .download-app {
+    font-size: 0.8rem;
     padding: 5px 0;
 }
 
-.user-profile .name-user {
-    font-size: 0.8rem;
-}
-
-.user-profile .name-user i {
+.user-profile .icon-user {
     background-color: gray;
+    font-size: 0.8rem;
+    color: white;
     height: 25px;
     width: 25px;
     border-radius: 50%;
@@ -322,12 +358,22 @@ a:hover {
     line-height: 25px;
 }
 
+.name-user {
+    font-size: 0.9rem;
+}
+
 .divisor {
     margin: 10px 0 15px;
     border: 1px solid gray;
 }
 
-/* COLUMN LARGE */
+/******* FINE COLUMN SMALL  *******/
+
+
+
+
+
+/*** COLUMN LARGE ***/
 
 .col-large {
     width: calc(100% - 175px);
@@ -385,7 +431,10 @@ a:hover {
 }
 
 
-/* SECTION  RECENTLY PLAYED */
+
+
+/********** LAYOUT SECTION **********/
+            /*****  *****/
 
 .cards {
     display: flex;
@@ -394,7 +443,7 @@ a:hover {
 }
 
 .col {
-    width: calc((100% - 50px) / 6);
+    width: calc((100% - (10px * (var(--num-column) - 1))) / var(--num-column));
     text-align: center;
 }
 
@@ -402,9 +451,8 @@ a:hover {
     margin-top: 10px;
 }
 
-
-.recently-played h2 {
-    margin-bottom: 17px;
+main img {
+    border-radius: 20px;
 }
 
 .img {
@@ -421,7 +469,12 @@ a:hover {
     font-size: 50px;
 }
 
-/* hover img */
+.col-large h2 {
+    font-size: 1.2rem;
+}
+
+
+/* hover img  COLUMN SECTION */
 .col-large img:hover {
     opacity: 0.4;
 }
@@ -438,19 +491,17 @@ a:hover {
 }
 
 
-/* SECTION JOHN DOE */
-
-    
 
 
-
-
-/* SECTION POPULAR ARTISTS */
-.popular-artists img {
-    border-radius: 50%;
+/* SECTION  RECENTLY PLAYED */
+.recently-played h2 {
+    margin-bottom: 17px;
 }
 
-/* SECTION GENERAL */
+
+
+
+/* SECTION JOHN DOE + SECTION POPULAR ARTISTS */
 .john-doe p,
 .popular-artists p {
     margin-top: 10px;
@@ -459,6 +510,13 @@ a:hover {
     font-weight: 600;
 }
 
-.col-large h2 {
-    font-size: 1.2rem;
+
+
+/* SECTION POPULAR ARTISTS */
+.popular-artists img {
+    border-radius: 50%;
 }
+
+
+
+

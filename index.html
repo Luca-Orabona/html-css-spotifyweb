@@ -19,23 +19,45 @@
             <!-- COLUMN SMALL -->
             <div class="col-small">
 
-                <img class="logo" src="./img/logo.svg" alt="logo spotify">
-                <img class="logo-small" src="./img/logo-small.svg" alt="logo spotify small">
 
-                <nav class="nav-col-small">
+                <!-- NAV USER -->
+                <nav class="nav-user">
+                   
+                    <img class="logo" src="./img/logo.svg" alt="logo spotify">
+                    <img class="logo-small" src="./img/logo-small.svg" alt="logo spotify small">
+
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                        <li><span class="border-left"></span><a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
                         <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i><span>Cerca</span></a></li>
                         <li><a href="#"><i class="fa-solid fa-list"></i><span>La tua libreria</span></a></li>
                     </ul>
 
+                </nav>
 
 
-                    <ul class="playlist">
-                        <li>
-                            <h3>playlist</h3>
-                        </li>
-                        <li><a href="#"><i class="fa-solid fa-square-plus"></i>Crea playlist</a></li>
+                <!-- CREATE PLAYLIST -->
+                <div class="create-playlist">
+                    <h3>playlist</h3>
+                    <a href="#"><i class="fa-solid fa-square-plus"></i>Crea playlist</a>
+                </div>
+
+
+                <!-- LIST PLAYLIST -->
+                <nav class="list-playlist">
+
+                    <ul class="nav-list-playlist">
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
                         <li><a href="#">Nome playlist</a></li>
                         <li><a href="#">Nome playlist</a></li>
                         <li><a href="#">Nome playlist</a></li>
@@ -44,13 +66,16 @@
                         <li><a href="#">Nome playlist</a></li>
                         <li><a href="#">Nome playlist</a></li>
                     </ul>
+
                 </nav>
 
+
+                <!-- USER PROFILE -->
                 <div class="user-profile">
                     <a class="download-app" href="#"><i class="fa-regular fa-circle-down"></i><span>Installa
                             app</span></a>
                     <div class="divisor"></div>
-                    <div class="name-user"><i class="fa-solid fa-user"></i><span>John Doe</span></div>
+                    <a href="#"><i class="fa-solid fa-user icon-user"></i></a><span class="name-user">John Doe</span>
                 </div>
 
             </div>
@@ -60,7 +85,7 @@
 
                 <!-- header -->
                 <header class="col-large-header">
-                    <div class="upgrade btn">Effettua l'upgrade</div>
+                    <a href="#" class="upgrade btn color-white">Effettua l'upgrade</a>
                 </header>
 
                 <!-- main -->
@@ -275,7 +300,7 @@
                     <i class="fa-solid fa-desktop"></i>
                     <i class="fa-solid fa-volume-up"></i>
                     <div class="bar inline-block">
-                        <div  class="bar-w-25">
+                        <div class="bar-w-25">
                             <div class="circle"></div>
                         </div>
                     </div>

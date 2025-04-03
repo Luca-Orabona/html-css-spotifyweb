@@ -3,9 +3,15 @@
 
 @media screen and (max-width: 768px) {
 
-    .col {
-        width: calc((100% - 30px) / 4);
+    :root {
+        --num-column: 4;
     }
+
+    /* .col {
+        width: calc((100% - (10px * (var(--num-column) - 1))) / var(--num-column));
+
+        width: calc((100% - 30px) / 4);
+    } */
 }
 
 /* SPOTIFY CAMBIO FOOTER */
@@ -40,8 +46,8 @@
 
 @media screen and (max-width: 520px) {
 
-    .col {
-        width: calc((100% - 10px) / 2);
+    :root {
+        --num-column: 2;
     }
 }
 
@@ -54,7 +60,7 @@
     .col-small {
         width: 50px; 
         align-items: center;
-        padding: 5px 0 8px;
+        padding: 7px 0 8px;
     }
 
     .col-large {
@@ -62,7 +68,8 @@
     }
 
     .col-small span,
-    .playlist,
+    .create-playlist,
+    .list-playlist,
     .divisor,
     .logo {
         display: none;
@@ -71,27 +78,24 @@
     .logo-small {
         display: block;
         width: 25px;
+        margin-bottom: 15px;
     }
 
-    .nav-col-small ul li {
-        margin-bottom: 10px;
+    .nav-user,
+    .user-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .col-small i {
+        font-size: 17px;
         margin-right: 0;
     }
 
-    .nav-col-small i {
-        font-size: 17px;
-    }
-
-    .user-profile .download-app {
-        display: flex;
-        justify-content: center;
-    } 
-
-    .name-user {
+    .icon-user {
         margin-top: 15px;
+        font-size: 0.8rem;
     }
 }
 
