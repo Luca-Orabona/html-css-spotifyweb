@@ -138,6 +138,8 @@ a:hover {
     align-items: center;
     height: 70px;
     background-color: #282828;
+    position: sticky;
+    bottom: 0;
 }
 
 .bottom-row [class$="-block"] {
@@ -270,6 +272,7 @@ a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: auto;
     width: 175px;
     height: 100%;
     padding: 15px 15px 4px;
