@@ -9,9 +9,22 @@ img {
     max-width: 100%;
 }
 
+
+
+/* CUSTOM PROPERTIES */
 :root {
     --num-column: 6;
+
+    /* font-weight */
+    --text-thickness: 600;
+
+
+    /* font-size */
+    --font-list-col-small: 0.8rem
 }
+
+
+
 
 /* UTILITIES */
 .flex {
@@ -117,6 +130,8 @@ a:hover {
 }
 
 
+
+
 /* ROW BOTTOM */
 .bottom-row {
     display: flex;
@@ -128,9 +143,6 @@ a:hover {
 .bottom-row [class$="-block"] {
     width: calc(100% / 3);
 }
-
-
-
 
 
 
@@ -148,10 +160,6 @@ a:hover {
     font-size: 0.6rem;
 }
 
-.icon-left-block {
-    text-align: center;
-}
-
 .icon-left-block i:first-child {
     margin-right: 10px;
 }
@@ -166,7 +174,7 @@ a:hover {
 
 .subtitle-left-block {
     font-size: 0.5rem;
-    font-weight: 600;
+    font-weight: var(--text-thickness);
 }
 
 .subtitle-left-block:hover {
@@ -205,7 +213,7 @@ a:hover {
 
 .center-block time {
     font-size: 0.6rem;
-    font-weight: 600;
+    font-weight: var(--text-thickness);
 }
 
 .time > * {
@@ -265,7 +273,6 @@ a:hover {
     width: 175px;
     height: 100%;
     padding: 15px 15px 4px;
-    overflow-y: auto;
     background-color: black;
     justify-content: space-between;
 }
@@ -276,8 +283,8 @@ a:hover {
 
 .col-small ul li {
     margin-bottom: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: var(--font-list-col-small);
+    font-weight: var(--text-thickness);
 }
 
 
@@ -291,6 +298,8 @@ a:hover {
 
 .logo-small {
     display: none;
+    width: 25px;
+    margin-bottom: 15px;
 }
 
 .border-left {
@@ -298,6 +307,7 @@ a:hover {
     width: 3px;
     height: 13px;
     background-color: greenyellow;
+    border-radius: 15px;
     position: absolute;
     left: 0;
 
@@ -320,7 +330,7 @@ a:hover {
 }
 
 .create-playlist a {
-    font-weight: 600;
+    font-weight: var(--text-thickness);
     font-size: 0.9rem;
 }
 
@@ -329,7 +339,7 @@ a:hover {
 .list-playlist {
     flex-grow: 1;
     margin-top: 15px;
-    overflow: auto;
+    overflow-y: scroll;
 }
 
 
@@ -337,19 +347,19 @@ a:hover {
 /* USER PROFILE */
 
 .user-profile {
-    font-weight: 600;
+    font-weight: var(--text-thickness);
     padding-top: 12px;
 }
 
 .user-profile .download-app {
-    font-size: 0.8rem;
+    font-size: var(--font-list-col-small);
     padding: 5px 0;
 }
 
 .user-profile .icon-user {
     background-color: gray;
-    font-size: 0.8rem;
     color: white;
+    font-size: var(--font-list-col-small);
     height: 25px;
     width: 25px;
     border-radius: 50%;
@@ -397,7 +407,7 @@ a:hover {
 .upgrade {
     text-transform: uppercase;
     font-size: 0.6rem;
-    font-weight: 600;
+    font-weight: var(--text-thickness);
 
 }
 
@@ -427,7 +437,7 @@ a:hover {
 .list-nav-main li {
     text-transform: uppercase;
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: var(--text-thickness);
 }
 
 
@@ -487,7 +497,7 @@ main img {
 .Subtitle {
     margin: 10px;
     font-size: 0.6rem;
-    font-weight: 600;
+    font-weight: var(--text-thickness);
 }
 
 
@@ -507,7 +517,7 @@ main img {
     margin-top: 10px;
     margin-bottom: 25px;
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: var(--text-thickness);
 }
 
 
@@ -516,6 +526,19 @@ main img {
 .popular-artists img {
     border-radius: 50%;
 }
+
+
+/* style scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+
 
 
 
